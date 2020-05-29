@@ -2,17 +2,18 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 function ListItem(props) {
+    const {url, imgUrl, title, price, quantityClass, quantity} = props;
     return (
         <div className="item">
         <div className="item-image">
-            <a href={props.url}>
-                <img src={props.imgUrl} alt={'offer'}/>
+            <a href={url}>
+                <img src={imgUrl} alt={'offer'}/>
             </a>
         </div>
         <div className="item-details">
-            <p className="item-title">{props.title}</p>
-            <p className="item-price">{props.price}</p>
-            <p className={`item-quantity level-${props.quantityClass}`}>{props.quantity} left</p>
+            <p className="item-title">{title}</p>
+            <p className="item-price">{price}</p>
+            <p className={`item-quantity level-${quantityClass}`}>{quantity} left</p>
         </div>
     </div>
     )

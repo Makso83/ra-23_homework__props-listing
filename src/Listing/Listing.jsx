@@ -30,14 +30,15 @@ const Listing = (props) => {
                 }
             }
             return (
-                <ListItem   key={shortid.generate()}
-                            listing_id={item.listing_id} 
-                            url={item.url} 
-                            imgUrl={item.MainImage.url_570xN} 
-                            title={newTitle()} 
-                            price={priceToRender}
-                            quantity={item.quantity}
-                            quantityClass={inspectQuantity()} />
+                <ListItem   
+                    key={shortid.generate()}
+                    listing_id={item.listing_id} 
+                    url={item.url} 
+                    imgUrl={item.MainImage.url_570xN} 
+                    title={newTitle()} 
+                    price={priceToRender}
+                    quantity={item.quantity}
+                    quantityClass={inspectQuantity()} />
             )
         }
     })
